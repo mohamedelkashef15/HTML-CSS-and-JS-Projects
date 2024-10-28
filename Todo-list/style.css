@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --gray: #333;
+  --green: #4bae4f;
+  --light-gray: #edeef0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", system-ui;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: var(--gray);
+  padding: 10px;
+}
+
+.todo-list {
+  background-color: #fff;
+  max-width: 540px;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.todo-list .title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.todo-list .title img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.todo-list .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.todo-list .row input {
+  background-color: var(--light-gray);
+  border: none;
+  outline: none;
+  padding: 15px;
+  width: 80%;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.todo-list .row .btn {
+  border: none;
+  background-color: var(--green);
+  color: #fff;
+  border-radius: 5px;
+  padding: 12px 30px;
+  cursor: pointer;
+}
+
+.todo-list ul li {
+  list-style: none;
+  font-size: 18px;
+  padding: 12px 8px 12px 50px;
+  position: relative;
+}
+
+.todo-list ul li span {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 25px;
+}
+
+.todo-list ul li::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  background: url("./imgs/unchecked.png") center/cover;
+}
+
+.todo-list ul li.checked::before {
+  background: url("./imgs/checked.png") center/cover;
+}
+
+.todo-list ul li.checked {
+  text-decoration: line-through;
+}
